@@ -22,15 +22,15 @@ module Enumerable
   end
 
   def my_all?
-    each do |el, i|
-      return false unless yield(el, i)
+    each do |el|
+      return false unless yield(el)
     end
     true
   end
 
   def my_any?
-    each do |el, i|
-      return true if yield(el, i)
+    each do |el|
+      return true if yield(el)
     end
     false
   end
